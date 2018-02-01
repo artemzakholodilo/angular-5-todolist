@@ -14,11 +14,11 @@
 <div style="margin: 5px 0px;">
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let item of todoListArray">
-       <span class="hover-cursor" [class.text-success]="item.isChecked" (click)="alterCheck(item.$key, item.isChecked)">
+       <span class="hover-cursor item-check-left" [class.text-success]="item.isChecked" (click)="alterCheck(item.$key, item.isChecked)">
          <i class="fa fa-lg" [ngClass]="item.isChecked?'fa-check-circle-o':'fa-circle-thin'"></i>
        </span>
        {{item.title}}
-       <span class="hover-cursor text-danger pull-right" (click)="onDelete(item.$key)"><i class="fa fa-trash-o fa-lg"></i></span>
+       <span class="hover-cursor text-danger pull-right item-check-right" (click)="onDelete(item.$key)"><i class="fa fa-trash-o fa-lg"></i></span>
     </li>
   </ul>
 </div>
